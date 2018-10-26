@@ -7,7 +7,7 @@ document.write(`//--------------------------- TASK 1 ------------------------- <
 function task1(b) {
 
   document.write(` Even numbers between 1 to ${b}:<br>`);
-  for (let i = 0; i < b; i+=2) {
+  for (let i = 2; i < b; i+=2) {
     if(i != (b-2)) {
       document.write(`${i}, `);
     } else {
@@ -49,7 +49,7 @@ document.write(`<br><br>//--------------------------- TASK 4 -------------------
 
 function task4(a) {
   let b = ''+a;
-  let sum = 0 ;
+  let sum = 0;
   for (let i = 0; i < b.length; i++) {
     sum += parseInt(b[i]);
   }
@@ -57,3 +57,49 @@ function task4(a) {
 }
 
 task4(453);
+
+//--------------------------- TASK 5 -------------------------
+document.write(`<br><br>//--------------------------- TASK 5 -------------------------  <br><br>`);
+
+function task5(a) {
+  let b = ''+a;
+  let words = ['zero','one','two','three','four', 'five','six','seven','eight','nine'];
+
+  document.write(`Number ${a} is `);
+
+  for (let i = 0; i < b.length; i++) {
+    document.write(` ${words[b[i]]}`);
+
+    if(i != (b.length-1)) {
+      document.write(' and');      
+    } else {
+      document.write('.');      
+    }
+  }
+}
+
+task5(453);
+
+//--------------------------- TASK 6 -------------------------
+document.write(`<br><br>//--------------------------- TASK 6 -------------------------  <br><br>`);
+
+function task6(a) {
+  let isPrime = true;
+
+  for (let i = 2; i < a; i++) {
+    if((a % i) ==0) {
+      isPrime = false;
+      i = a;
+    }    
+  }
+
+  document.write(`Number ${a} is `);
+
+  if(isPrime) {
+    document.write('prime.');
+  } else {
+    document.write('not prime.');
+  }
+}
+
+task6(10);
