@@ -103,3 +103,45 @@ function task6(a) {
 }
 
 task6(10);
+
+//--------------------------- arrayTask -------------------------
+document.write(`<br><br>//--------------------------- arrayTask -------------------------  <br><br>`);
+
+function arrayTask() {
+  let a = new Array('a', 'b', 'c', 'd');
+  document.write(`Array 'a': ${a}.<br><br>`);
+
+  a.pop();
+  document.write(`Array 'a' after pop(): ${a}.<br><br>`);
+
+  a.push('e', 'f');
+  document.write(`Array 'a' after push('e', 'f'): ${a}.<br><br>`);
+
+  a.shift();
+  document.write(`Array 'a' after shift(): ${a}.<br><br>`);
+
+  a.unshift('z', 'y');
+  document.write(`Array 'a' after unshift('z', 'y'): ${a}.<br><br>`);
+
+  a.toString();
+  document.write(`Array 'a' after toString(): ${a}.<br><br>`);
+
+  let b = ['g', 'h', 'j', 'k'];
+  let c= a.concat(b);
+  document.write(`Array 'c' after a.concat(b): ${c}.<br><br>`);
+
+  let line = c.join('-');
+  document.write(`String 'line' equals c.join('-'): ${line}.<br><br>`);
+
+  c.reverse();
+  document.write(`Array 'c' after c.reverse()): ${c}.<br><br>`);
+
+  let p = c.slice(1,3);
+  document.write(`Array 'p' equals c.slice(1,3)): ${p}.<br><br>`);
+  document.write(`Array 'c' after c.slice(1,3)): ${c}.<br><br>`);
+
+  c.splice(1,3);
+  document.write(`Array 'p' equals c.slice(1,3)): ${c}.<br><br>`);
+}
+
+arrayTask();
