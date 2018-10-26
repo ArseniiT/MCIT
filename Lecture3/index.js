@@ -47,10 +47,13 @@ task3(453);
 //--------------------------- TASK 4 -------------------------
 document.write(`<br><br>//--------------------------- TASK 4 -------------------------  <br><br>`);
 
-function task4() {
-  let a = 453;
+function task4(a) {
   let b = ''+a;
-  console.log(parseInt(b[0]) + parseInt(b[b.length - 1]));
+  let sum = 0 ;
+  for (let i = 0; i < b.length; i++) {
+    sum += parseInt(b[i]);
+  }
+  document.write(`Sum of all digits of number ${a} is ${sum}.`);
 }
 
-task4();
+task4(453);
