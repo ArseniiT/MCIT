@@ -23,6 +23,10 @@ function converter(degWithType) {
     return toCel(deg);
   }
   if (type === 'c') {
+    let c = {
+      name: 1.2,
+      
+    }
     return toFahr(deg);
   }
 }
@@ -32,3 +36,5 @@ document.write(`45F in celsius equals ${toCel(45)} <br><br>`);
 document.write(`60C in celsius equals ${converter('60c')} <br><br>`);
 document.write(`45F in celsius equals ${converter('45f')} <br><br>`);
 document.write(`45F in celsius equals ${converter('45fff')} <br><br>`);
+
+
