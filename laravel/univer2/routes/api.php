@@ -24,16 +24,16 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/hel', 'DepartmentController@hello');
 Route::get('/department', 'DepartmentController@getAllDepartments');
-Route::get('/department/{id}', 'DepartmentController@getAirlineByID');
-Route::get('/department/byworth/{worth}', 'DepartmentController@getAirlinesByWorth');
-Route::get('/department/byworth/{worth}/order/{order}', 'DepartmentController@getAirlinesByWorthAndOrdered');
-Route::post('/department', 'DepartmentController@createAirline');
-Route::put('/department/{id}', 'DepartmentController@updateAirline');
-Route::delete('/department/{id}', 'DepartmentController@deleteAirline');
-Route::post('/department/withpilot', 'DepartmentController@createAirlineWithPilot');
+Route::get('/department/{id}', 'DepartmentController@getDepartmentByID');
+Route::get('/department/byworth/{worth}', 'DepartmentController@getDepartmentsByWorth');
+Route::get('/department/byworth/{worth}/order/{order}', 'DepartmentController@getDepartmentsByWorthAndOrdered');
+Route::post('/department', 'DepartmentController@createDepartment');
+Route::put('/department/{id}', 'DepartmentController@updateDepartment');
+Route::delete('/department/{id}', 'DepartmentController@deleteDepartment');
+Route::post('/department/withprofessor', 'DepartmentController@createDepartmentWithProfessor');
 
-Route::post('/pilots', 'PilotControllerAPI@createPilot');
-Route::put('/pilots/dissociate/{id}', 'PilotControllerAPI@dissociatePilotFromAirline');
-Route::put('/pilots/associate/{pilot_id}/{airline_id}', 'PilotControllerAPI@associatePilotToAirline');
-Route::put('/pilots/attach/{pilot_id}/{flight_id}', 'PilotControllerAPI@attachPilotToFlight');
-Route::put('/pilots/detach/{pilot_id}/{flight_id}', 'PilotControllerAPI@detachPilotFromFlight');
+Route::post('/professors', 'PilotControllerAPI@createPilot');
+Route::put('/professors/dissociate/{id}', 'PilotControllerAPI@dissociatePilotFromAirline');
+Route::put('/professors/associate/{professor_id}/{airline_id}', 'PilotControllerAPI@associatePilotToAirline');
+Route::put('/professors/attach/{professor_id}/{flight_id}', 'PilotControllerAPI@attachPilotToFlight');
+Route::put('/professors/detach/{professor_id}/{flight_id}', 'PilotControllerAPI@detachPilotFromFlight');
